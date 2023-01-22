@@ -1,7 +1,7 @@
 import key_word_detection
 import stt
 import tts
-import openai_chatgtp3
+import openai_chatgtp
 from concurrent.futures import ThreadPoolExecutor
 from logger import log
 import constant
@@ -10,7 +10,7 @@ import string
 threadPool = ThreadPoolExecutor(max_workers=8, thread_name_prefix="chatapp")
 key_word = key_word_detection.key_word_detection()
 recognizer = stt.stt()
-gpt = openai_chatgtp3.chatgpt()
+gpt = openai_chatgtp.chatgpt()
 speaker = tts.tts()
 
 
