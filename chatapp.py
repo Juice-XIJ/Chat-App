@@ -1,11 +1,12 @@
+import string
+from concurrent.futures import ThreadPoolExecutor
+
+import constant
 import key_word_detection
+import openai_chatgtp
 import stt
 import tts
-import openai_chatgtp
-from concurrent.futures import ThreadPoolExecutor
 from logger import log
-import constant
-import string
 
 threadPool = ThreadPoolExecutor(max_workers=8, thread_name_prefix="chatapp")
 key_word = key_word_detection.key_word_detection()
@@ -32,7 +33,7 @@ if __name__ == "__main__":
 
         threadPool.submit(end_session_detection)
         while True:
-            # end session when bye detected, or 5 empty human talk happened continuously
+            # end session when bye detected, or 5 empty human talk happened continuously, or bye keyword in human talk
             if key_word.is_bye_detected() \
                     or empty_human_talk_count > 5\
                     or constant.bye_keyword in human_talk.lower().translate(str.maketrans('', '', string.punctuation)):
