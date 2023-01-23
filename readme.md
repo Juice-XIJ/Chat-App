@@ -9,7 +9,7 @@ Therefore you have to create your own resources:
 2. [OpenAI ChatGPT](https://beta.openai.com/overview). Free trial available as well.
 
 ## How to Play with?
-1. When you finished `Service Dependencies`, please update them on variables `api_key`, `region` and `openai_key` in file `constant.py`.
+1. When you finished `Service Dependencies`, please update them on variables `api_key`, `region` and `openai_key` in file `resources/config.json`.
 2. Then you could describe who you want to talk with. Update your description on variable `bot_character` in file `constant.py`
 3. (Optional) Now it's ready to run. But if you want to have your own key word, play voice, or bot name, feel free to update `info` in file `constant.py`.
 4. Feel free to explore more available options :)

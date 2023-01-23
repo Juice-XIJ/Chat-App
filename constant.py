@@ -1,12 +1,15 @@
 import os
+import json
 
 # ==== repo path
 root_path = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join("resources", "config.json"), 'r') as f:
+    config = json.load(f)
 
 
 # ==== Supported languages: en-us, zh-cn
 supported_language = ['en-us', 'zh-cn']
-language_index = 0
+language_index = 1
 language = supported_language[language_index]
 
 
@@ -15,8 +18,8 @@ language = supported_language[language_index]
 # Please make sure your region is compatible with tts voice name is in this list (some preview voice names are only supported in part of regions):
 # https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support?tabs=tts
 # In resources/tts.config, tts_voice.json listed all available languages/voice/style in region eastus
-api_key = ''
-region = ''
+api_key = config['speech_resources']['api_key']
+region = config['speech_resources']['region']
 
 
 # ==== key word detection meta
@@ -37,7 +40,7 @@ hello_audio = os.path.join('resources', hello_audio_list[language_index])
 
 
 # ==== open ai - chatgpt info. Create OpenAi account and api key: https://beta.openai.com/account/api-keys
-openai_key = ''
+openai_key = config['openai']['api_key']
 bot_character = '{0} is a cute girl that is friendly:'
 ai_name_list = ['blue', '胖胖']
 ai_name = ai_name_list[language_index]

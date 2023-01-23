@@ -1,0 +1,9 @@
+{
+    "speech_resources": {
+        "api_key": "",
+        "region": ""
+    },
+    "openai": {
+        "api_key": ""
+    }
+}

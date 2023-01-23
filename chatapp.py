@@ -22,6 +22,11 @@ def end_session_detection():
 
 if __name__ == "__main__":
     try:
+        if constant.api_key is None or len(constant.api_key)  == 0 \
+                or constant.region is None or len(constant.region) == 0 \
+                or constant.openai_key is None or len(constant.openai_key) == 0:
+            raise Exception('Please make sure resources/config.json has correct values')
+
         key_word.hello_keyword_locally_from_microphone()
         key_word.stop_hello_keyword_recognition()
 
