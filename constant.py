@@ -44,8 +44,10 @@ openai_key = config['openai']['api_key']
 bot_character = '{0} is a cute girl that is friendly:'
 ai_name_list = ['blue', '胖胖']
 ai_name = ai_name_list[language_index]
-model_engine_list = ['text-ada-001', 'text-babbage-001	', 'text-curie-001', 'text-davinci-003']
-model_engine = model_engine_list[3]  # most powerful engine
+model_engine_list = ['text-davinci-003']
+model_engine = model_engine_list[0]  # most powerful engine
+max_token = 150
+token_limitation = 2048  # text-davinci-003 supports 4096 tokens but limit the number in client to avoid consuming token quota too fast
 
 
 # ==== tts info
@@ -63,7 +65,7 @@ style = style_list[language_index]
 styledegree_list = ['1', '1']
 styledegree = styledegree_list[language_index]
 
-role_list = ['', 'YoungAdultFemale']
+role_list = ['', 'Girl']
 role = role_list[language_index]
 
 hello_word_list = ['Hey I\'m here', '你好呀']
