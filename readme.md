@@ -1,6 +1,10 @@
 # Chat App
 Chat App allows people to chat with a BOT. But you could define everything you want for the BOT, like it's person.
 
+## Demo
+1. [Happy Chinese Lunar New Year - 春节快乐！](https://www.bilibili.com/video/BV1Ex4y1M7vQ)
+2. [Horizon 5 Chat - 地平线5相关闲聊](https://www.bilibili.com/video/BV17T411y7cf/)
+
 ## Service Dependencies
 Chat App leverages the MS speech service (Key word detection, TTS, STT) and OpenAI (ChatGPT).
 Therefore you have to create your own resources:
