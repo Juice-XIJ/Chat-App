@@ -31,7 +31,7 @@ class stt():
         speech_recognition_result = self.speech_recognizer.recognize_once_async().get()
 
         if speech_recognition_result.reason == speechsdk.ResultReason.RecognizedSpeech:
-            log.info("You: {}".format(speech_recognition_result.text))
+            log.info("You: {}".format(speech_recognition_result.text + '\n'))
         else:
             return ''
 

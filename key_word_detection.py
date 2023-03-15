@@ -73,7 +73,7 @@ class key_word_detection():
         """runs keyword spotting locally, with direct access to the result audio"""
         # Start keyword recognition.
         result_future = self.hello_keyword_recognizer.recognize_once_async(self.hello_model)
-        log.info('Say something starting with "{}" followed by whatever you want...'.format(constant.hello_keyword))
+        log.info('Say something starting with "{}" followed by whatever you want...\n'.format(constant.hello_keyword))
         result_future.get()
 
     def stop_hello_keyword_recognition(self):

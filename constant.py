@@ -41,11 +41,11 @@ hello_audio = os.path.join('resources', hello_audio_list[language_index])
 
 # ==== open ai - chatgpt info. Create OpenAi account and api key: https://beta.openai.com/account/api-keys
 openai_key = config['openai']['api_key']
-bot_character = '{0} is a cute girl that is friendly:'
+bot_character = 'You are {0}, a boy and is homebody and very like to play game, especially the car racing game "Forza Horizon 5":'
 ai_name_list = ['blue', '胖胖']
 ai_name = ai_name_list[language_index]
-model_engine_list = ['text-davinci-003']
-model_engine = model_engine_list[0]  # most powerful engine
+model_engine_list = ['text-davinci-003', 'gpt-3.5-turbo']
+model_engine = model_engine_list[1]  # most powerful engine
 max_token = 150
 token_limitation = 2048  # text-davinci-003 supports 4096 tokens but limit the number in client to avoid consuming token quota too fast
 
@@ -55,17 +55,17 @@ token_limitation = 2048  # text-davinci-003 supports 4096 tokens but limit the n
 # or you can visit
 #   https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech?tabs=streaming#sample-request
 # to get full list in your region
-lang_list = ['en-us', 'zh-cn']
+lang_list = ['en-us', 'zh-CN-liaoning']
 tts_lang = lang_list[language_index]
-voice_name_list = ['en-US-JennyNeural', 'zh-CN-XiaohanNeural']
+voice_name_list = ['en-US-JennyNeural', 'zh-CN-liaoning-XiaobeiNeural']
 voice_name = voice_name_list[language_index]
 
-style_list = ['friendly', 'affectionate']
+style_list = ['friendly', '']
 style = style_list[language_index]
 styledegree_list = ['1', '1']
 styledegree = styledegree_list[language_index]
 
-role_list = ['', 'Girl']
+role_list = ['', '']
 role = role_list[language_index]
 
 hello_word_list = ['Hey I\'m here', '你好呀']
